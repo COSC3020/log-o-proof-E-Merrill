@@ -11,18 +11,16 @@ page](https://docs.github.com/en/get-started/writing-on-github/working-with-adva
 might help with the notation for mathematical expressions.
 
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$
-Let $T(n) = log_2n$ and $f(n) = log_5n$  
-If $T(n) \in O(f(n))$ then (the growth of T(n)) $\leq$ (the growth of f(n))  
-The growth of a function can be found from its first derivative.  
-$\frac{d}{dn} T(n) = \frac{d}{dn} log_2n$    $\frac{d}{dn} f(n) = \frac{d}{dn} log_5n$  
-$T'(n) = \frac{1}{ln(2)} * \frac{1}{n}    f'(n) = \frac{1}{ln(5)} * \frac{1}{n}$  
-$\frac{1}{ln(2)}$  and  $\frac{1}{ln(5)}$  are both just constants, which have no bearing on the asymptotic complexity of a function/algorithm.  
-Thus, ignoring the constant yields:  
-$T'(n) = \frac{1}{n}    f'(n) = \frac{1}{n}$  
-These two function are the same, meaning that their parent functions, $T(n)$ and $f(n)$ grow at the same rate (the same end behavior.)  
-This means that there must be a nonzero, positive constant **c** such that $T(n) \leq c * f(n)$  
-This satisfies the definition for $T(n) \in O(f(n))$:  
+Applying the log base change formula to change both logarithms to a base of e:  
+$log_{5} n = \frac{ln n}{ln 5} = \frac{1}{ln 5} * ln n$  
+
+$log_{2} n = \frac{ln n}{ln 2} = \frac{1}{ln 2} * ln n$  
+Both logarithms follow the formula of *constant* \cdot ln n.  
+It follows that, for either of the two logarithms:  
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$  
+In more concrete words:   
+$\frac{ln n}{ln 5} \in O(\frac{ln n}{ln 2})$  since  $\exists c, n_0: \frac{ln n}{ln 5} \leq c \cdot \frac{ln n}{ln 2} \forall n \geq n_0$  
+This satisfies the defintion for a function/algorithm to be an element of big O.
 
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
