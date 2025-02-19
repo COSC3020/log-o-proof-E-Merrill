@@ -14,7 +14,7 @@ $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0
 Applying the log base change formula to change both logarithms to a base of e:  
 $log_{5} n = \frac{ln{n}}{ln 5} = \frac{1}{ln 5} * ln n$  
 
-$log_{2} n = \frac{ln{n}}{ln 2} = \frac{1}{ln 2} * ln n$  
+$log_{2} n = \frac{ln(n)}{ln 2} = \frac{1}{ln 2} * ln n$  
 Both logarithms follow the formula of *constant* \cdot ln{n}.  
 It follows that, for either of the two logarithms:  
 $T(n) \in O(f(n)) \iff \exists c, n_0: T(n) \leq c \cdot f(n) \forall n \geq n_0$  
