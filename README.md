@@ -12,7 +12,7 @@ might help with the notation for mathematical expressions.
 
 To show that $O(log_{5} n)$ and $O(log_{2} n)$ are asymptoticallly equivalent, it must be shown that any arbitrary function, f(n), that belongs to O(log_{2} n) also belongs to O(log_{5} n).  
 Applying the logarithm change of base formula to $log_{5} n$ nets:  
-$log_{5}n = \frac{log_{2}n}{log_{2}5} = \frac{1}{log_{2}5} * \frac{log_{2}n}$
+$log_{5}n = \frac{log_{2}n}{log_{2}5} = \frac{1}{log_{2}5} * log_{2}n$
 Assuming it is true that $f(n) \in O(log_{5}n)$, we can make the statement $f(n) \leq c * log_{5}n$, where c is some arbitrary, positive, nonzero constant.  
 Inserting the equivalent expression for log_{5}n:  
 $f(n) \leq c * \frac{1}{log_{2}5} * log_{2}n$  
@@ -21,7 +21,7 @@ This brings the expression to $f(n) \leq c' * log_{2}n$  which satisfies the def
 
 **Showing the same thing, but with $log_{2}n$**  
 Applying change of base formula to $log_{2}n$:  
-$log_{2}n = \frac{log_{5}n}{log_{5}2} = \frac{1}{log_{5}2} * \frac{log_{5}n}$  
+$log_{2}n = \frac{log_{5}n}{log_{5}2} = \frac{1}{log_{5}2} * log_{5}n$  
 Assume $f(n) \in O(log_{2}n)$ and make the assertion $f(n) \leq c * log_{2}n$, where is an arbitrary, positive constant.  
 Substituting an equivalent expression for $log_{2}n$:  
 $f(n) \leq c * \frac{1}{log_{5}2} * log_{5}n$  
