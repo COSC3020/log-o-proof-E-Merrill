@@ -20,6 +20,7 @@ Since $\frac{1}{log_{2}5}$ is just another postive constant, it can be put into 
 This brings the expression to $f(n) \leq c' * log_{2}n$  which satisfies the definition for $f(n) \in O(log_{5}n)$  
 
 **Showing the same thing, but with $log_{2}n$**  
+
 Applying change of base formula to $log_{2}n$:  
 $log_{2}n = \frac{log_{5}n}{log_{5}2} = \frac{1}{log_{5}2} * log_{5}n$  
 Assume $f(n) \in O(log_{2}n)$ and make the assertion $f(n) \leq c * log_{2}n$, where is an arbitrary, positive constant.  
